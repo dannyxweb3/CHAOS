@@ -1,0 +1,11 @@
+# pack-refs with: peeled fully-peeled sorted 
+6cb6a16541d9f97aaf0370c7725a7c88051f8bed refs/remotes/origin/ci-workflow
+185665d1bbbd1648cc5eb79fa5d3a411d5dfb789 refs/remotes/origin/feature/build-client-on-windows
+55d14b203bc1444498ee0c2b96a1ab3304d99d77 refs/remotes/origin/main
+b09f8ef92a6e8df37f18713e6f0c07dfae767a9b refs/remotes/origin/refact-2024-1
+da022eeda0c3ac75d722f579f7aaef08dec5a9a2 refs/remotes/origin/test-ci-on-pr
+1dc2f860be19de19c521875987681c1d4e488649 refs/tags/v5.0.0
+^8b35e4baf9d9a0da0aa3d418119ac403061aae34
+7752723e0acca88a5f8524e659722da5bb1ca74a refs/tags/v5.0.1
+f1b4fc69d8dd97360b177ef3135a79716a47d8ef refs/tags/v5.0.2
+eb1ffcbc973700b4d4b1d4d739b2759d05eaca14 refs/tags/v5.0.3
