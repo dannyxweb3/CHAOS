@@ -10,6 +10,7 @@ type Device struct {
 	MacAddress       string `json:"mac_address" binding:"required"`
 	MacAddressBase64 string `json:"mac_address_base_64" gorm:"-"`
 	LocalIPAddress   string `json:"local_ip_address"`
+	RemoteIP         string `json:"remote_ip"`
 	Port             string `json:"port"`
 	FetchedUnix      int64  `json:"fetched_unix" binding:"required"`
 }

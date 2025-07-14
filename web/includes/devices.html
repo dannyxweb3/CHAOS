@@ -21,7 +21,7 @@
                         <th scope="col">Hostname</th>
                         <th scope="col">Username</th>
                         <th scope="col">OS</th>
-                        <th scope="col">Local IP</th>
+                        <th scope="col">Remote IP</th>
                         <th scope="col">Mac Address</th>
                         <th scope="col" class="text-center">Management</th>
                     </tr>
@@ -44,7 +44,7 @@
                                 {{ if (eq .OSName "darwin") }}<td><span class="badge badge-success"> {{ .OSName }}</span></td>{{ end }}
                                 {{ if and (ne .OSName "linux") (ne .OSName "windows") (ne .OSName "darwin") }}<td><a class="badge badge-info"> {{ .OSName }}</a></td>{{ end }}
 
-                                <td>{{ .LocalIPAddress }}</td>
+                                <td>{{ .RemoteIP }}</td>
                                 <td>{{ .MacAddress }}</td>
                                 <td class="py-2 text-center">
                                     <div class="btn-group" role="group">

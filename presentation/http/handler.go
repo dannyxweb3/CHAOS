@@ -5,6 +5,14 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"net/http"
+	"net/url"
+	"os"
+	"path/filepath"
+	"strconv"
+	"strings"
+	"time"
+
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"github.com/gorilla/websocket"
@@ -17,13 +25,6 @@ import (
 	"github.com/tiagorlampert/CHAOS/presentation/http/request"
 	"github.com/tiagorlampert/CHAOS/services/client"
 	"github.com/tiagorlampert/CHAOS/services/user"
-	"net/http"
-	"net/url"
-	"os"
-	"path/filepath"
-	"strconv"
-	"strings"
-	"time"
 )
 
 var upgrader = websocket.Upgrader{
@@ -131,6 +132,8 @@ func (h *httpController) setDeviceHandler(c *gin.Context) {
 		c.Status(http.StatusBadRequest)
 		return
 	}
+
+	body.RemoteIP = c.ClientIP()
 
 	fields := logrus.Fields{
 		"hostname":   body.Hostname,
